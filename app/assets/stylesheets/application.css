@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: rgb(240,240,240);
+}
+.my-header {
+  background-color: #2980b9;
+  color: rgb(250,250,250);
+  top: 0;
+  padding: 25px 50px;
+}
