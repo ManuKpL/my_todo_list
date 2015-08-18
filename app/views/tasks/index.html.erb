@@ -1,20 +1,20 @@
 <div class="card-list text-center">
   <h2>Your tasks are:</h2>
+  <%= link_to "Add a new task", new_task_path, class: "btn btn-success" %>
+  <br>
+  <br>
   <ul>
     <% @tasks.each do |task| %>
-    <li>
+    <li class="task-item">
       <%= link_to task.name, task_path(task) %>
       <% if task.done %>
         <i class="fa fa-check"></i>
       <% else %>
         <i class="fa fa-times"></i>
       <% end %>
+      (<%= link_to edit_task_path(task) do %><i class="fa fa-pencil"></i><% end %>,
+      <%= link_to task_path(task), method: :delete do %><i class="fa fa-trash-o"></i><% end %>)
     </li>
     <% end %>
   </ul>
-</div>
-<hr>
-<div class="user-actions text-center">
-  <h3>Modify the list</h3>
-  <%= link_to "Add a new task", new_task_path, class: "btn btn-success" %>
 </div>
