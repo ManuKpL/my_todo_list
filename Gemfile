@@ -25,7 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # using the boostrap library + fontawesome
 gem 'bootstrap-sass', '~> 3.3.5.1'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 4.3.0'
+gem 'simple_form'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
