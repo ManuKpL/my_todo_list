@@ -1,0 +1,14 @@
+<hr>
+<%= form_for(@task) do |f| %>
+  <div class="form-group">
+    <%= f.label :name, "What is the name of your task?" %>
+    <%= f.text_field :name, placeholder: "Task name", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, "How would you describe your task?" %>
+    <%= f.text_area :description, placeholder: "Task description", class: "form-control" %>
+  </div>
+  <%= f.submit "Submit", class: "btn btn-success" %>
+<% end %>
+<br>
+<%= link_to "Cancel and go back to Todo List", tasks_path, class: "btn btn-danger" %>
