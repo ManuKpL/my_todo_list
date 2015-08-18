@@ -23,7 +23,6 @@ class TasksController < ApplicationController
 
   def update
     @task.update(task_params)
-    @task.save
     redirect_to root_path
   end
 
