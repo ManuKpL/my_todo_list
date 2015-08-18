@@ -3,18 +3,34 @@
   <%= link_to "Add a new task", new_task_path, class: "btn btn-success" %>
   <br>
   <br>
-  <ul>
-    <% @tasks.each do |task| %>
-    <li class="task-item">
-      <%= link_to task.name, task_path(task) %>
-      <% if task.done %>
-        <i class="fa fa-check"></i>
-      <% else %>
-        <i class="fa fa-times"></i>
+  <div class="">
+    <table class="tasks-list">
+      <tr>
+        <th class="text-center">Task</th>
+        <th class="text-center">Done?</th>
+        <th class="text-center">Edit</th>
+        <th class="text-center">Delete</th>
+      </tr>
+      <% @tasks.each do |task| %>
+      <tr>
+        <td>
+          <%= link_to task.name, task_path(task) %>
+        </td>
+        <td>
+          <% if task.done %>
+            <%= link_to done_task_path(task), method: :patch do %><i class="fa fa-check"></i><% end %>
+          <% else %>
+            <%= link_to done_task_path(task), method: :patch do %><i class="fa fa-times"></i><% end %>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to edit_task_path(task) do %><i class="fa fa-pencil"></i><% end %>
+        </td>
+        <td>
+          <%= link_to task_path(task), method: :delete do %><i class="fa fa-trash-o"></i><% end %>
+        </td>
+      </tr>
       <% end %>
-      (<%= link_to edit_task_path(task) do %><i class="fa fa-pencil"></i><% end %>,
-      <%= link_to task_path(task), method: :delete do %><i class="fa fa-trash-o"></i><% end %>)
-    </li>
-    <% end %>
-  </ul>
+    </table>
+  </div>
 </div>

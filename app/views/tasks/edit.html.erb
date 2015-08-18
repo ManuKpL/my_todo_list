@@ -1,2 +1,17 @@
-<h1>Tasks#edit</h1>
-<p>Find me in app/views/tasks/edit.html.erb</p>
+<div class="card-task text-center">
+  <h2>Edit the task: <%= @task.name %></h2>
+  <hr>
+  <%= form_for(@task) do |f| %>
+    <div class="form-group">
+      <%= f.label :name, "What is the name of your task?" %>
+      <%= f.text_field :name, placeholder: "Task name", class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :description, "How would you describe your task?" %>
+      <%= f.text_field :description, placeholder: "Task description", class: "form-control" %>
+    </div>
+    <%= f.submit "Submit", class: "btn btn-success" %>
+  <% end %>
+  <br>
+  <%= link_to "Cancel and go back to Todo List", tasks_path, class: "btn btn-danger" %>
+</div>
