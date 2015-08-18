@@ -6,6 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Task.create(name: "Laundry", done: false)
-Task.create(name: "Shopping", done: false)
-Task.create(name: "Cleaning", done: false)
+Task.create(name: "Laundry", done: false, description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident laborum excepturi facere dicta neque, voluptate dolorem fugit. Recusandae, eaque quam assumenda doloremque dignissimos voluptatum possimus ut nisi facere rem. Esse!")
+Task.create(name: "Shopping", done: false, description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident laborum excepturi facere dicta neque, voluptate dolorem fugit. Recusandae, eaque quam assumenda doloremque dignissimos voluptatum possimus ut nisi facere rem. Esse!")
+Task.create(name: "Cleaning", done: false, description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident laborum excepturi facere dicta neque, voluptate dolorem fugit. Recusandae, eaque quam assumenda doloremque dignissimos voluptatum possimus ut nisi facere rem. Esse!")

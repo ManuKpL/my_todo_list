@@ -1,4 +1,4 @@
-<div class="text-center">
+<div class="card-list text-center">
   <h2>Your tasks are:</h2>
   <ul>
     <% @tasks.each do |task| %>
@@ -12,4 +12,9 @@
     </li>
     <% end %>
   </ul>
+</div>
+<hr>
+<div class="user-actions text-center">
+  <h3>Modify the list</h3>
+  <%= link_to "Add a new task", new_task_path, class: "btn btn-success" %>
 </div>
